@@ -11,4 +11,13 @@ import scrapy
 class RentinfoItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    rent = scrapy.Field()
+    address = scrapy.Field()
+    suburb = scrapy.Field()
+    state = scrapy.Field()
+    postcode = scrapy.Field()
+    no_bedroom = scrapy.Field()
+    no_bathroom = scrapy.Field()
+    no_carspace = scrapy.Field()
+    property_type = scrapy.Field()
+    amenities = scrapy.Field()
