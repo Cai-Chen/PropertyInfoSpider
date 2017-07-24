@@ -64,9 +64,17 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'rentinfo.pipelines.RentinfoPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'rentinfo.pipelines.RentinfoPipeline': 300,
+}
+
+#Mysql config
+MYSQL_HOST = '127.0.0.1'
+MYSQL_DBNAME = 'scrapy'
+MYSQL_USER = 'root'
+MYSQL_PASSWD = '84207637'
+
+MYSQL_PORT = 3306
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html

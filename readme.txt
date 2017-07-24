@@ -9,4 +9,4 @@ minbeds = None (Single option: Studio,  1, 2, 3, 4, 5)
 maxbeds = None (Single option: Studio,  1, 2, 3, 4, 5)
 
 Eg.
-scrapy crawl rentinfo_spider -a location="Box Hill, Vic 3128" -a property_type="House,unit apartment,Townhouse" -a minbeds="Studio" -a maxbeds="2"
+scrapy crawl rentinfo_spider -a location="Box Hill, Vic 3128" -a property_type="House" -a minbeds="2" -a maxbeds="2"

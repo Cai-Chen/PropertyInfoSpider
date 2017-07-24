@@ -1,0 +1,76 @@
+[INFO  - 2017-07-24T13:30:12.250Z] GhostDriver - Main - running on port 62763
+[INFO  - 2017-07-24T13:30:12.657Z] Session [389e5fb0-7074-11e7-a8e0-db0c4ce17232] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36","webSecurityEnabled":true}
+[INFO  - 2017-07-24T13:30:12.657Z] Session [389e5fb0-7074-11e7-a8e0-db0c4ce17232] - page.customHeaders:  - {}
+[INFO  - 2017-07-24T13:30:12.658Z] Session [389e5fb0-7074-11e7-a8e0-db0c4ce17232] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"},"phantomjs.page.settings.userAgent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36","phantomjs.page.settings.loadImages":false}
+[INFO  - 2017-07-24T13:30:12.659Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 389e5fb0-7074-11e7-a8e0-db0c4ce17232
+[ERROR - 2017-07-24T13:30:26.581Z] Session [389e5fb0-7074-11e7-a8e0-db0c4ce17232] - page.onError - msg: TypeError: null is not an object (evaluating 'document.getElementById("MCbutton"+e).style')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-07-24T13:30:26.581Z] Session [389e5fb0-7074-11e7-a8e0-db0c4ce17232] - page.onError - stack:
+  global code (https://www.realestate.com.au/rent:3)
+  writeln (:0)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-07-24T13:30:36.608Z] Session [389e5fb0-7074-11e7-a8e0-db0c4ce17232] - page.onError - msg: ReferenceError: Can't find variable: getParameter
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-07-24T13:30:36.608Z] Session [389e5fb0-7074-11e7-a8e0-db0c4ce17232] - page.onError - stack:
+  global code (http://content.aimatch.com/rea/6915/170404-Lindellas-728x90/728x90.html?clickTag=http%3A//sasinator.realestate.com.au/rea/adclick/FCID%3D747914/viewid%3D1500903035682/site%3Drea/area%3Drent.resultslist/kxkuid%3Dr1hfseezi/bedmax%3D2/bedmin%3D2/pcode%3D3128/price%3D350pw_450pw/proptype%3Dhouse/region%3Dinner_east_melbourne/state%3Dvic/sub%3Dboxhill/random%3D4267079213/pos%3Dheader/size%3D728x90%2C468x60&clickTag1=http%3A//sasinator.realestate.com.au/rea/adclick/FCID%3D747914/viewid%3D1500903035682/site%3Drea/area%3Drent.resultslist/kxkuid%3Dr1hfseezi/bedmax%3D2/bedmin%3D2/pcode%3D3128/price%3D350pw_450pw/proptype%3Dhouse/region%3Dinner_east_melbourne/state%3Dvic/sub%3Dboxhill/random%3D4267079213/pos%3Dheader/size%3D728x90%2C468x60:19)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-07-24T13:30:38.391Z] Session [389e5fb0-7074-11e7-a8e0-db0c4ce17232] - page.onError - msg: ReferenceError: Can't find variable: getParameter
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-07-24T13:30:38.391Z] Session [389e5fb0-7074-11e7-a8e0-db0c4ce17232] - page.onError - stack:
+  global code (http://content.aimatch.com/rea/6915/170404-Lindellas-300x600/300x600.html?clickTag=http%3A//sasinator.realestate.com.au/rea/adclick/FCID%3D747915/viewid%3D1500903035682/site%3Drea/area%3Drent.resultslist/kxkuid%3Dr1hfseezi/bedmax%3D2/bedmin%3D2/pcode%3D3128/price%3D350pw_450pw/proptype%3Dhouse/region%3Dinner_east_melbourne/state%3Dvic/sub%3Dboxhill/random%3D8894212418/pos%3Dskyscraper/size%3D160x600%2C120x600%2C300x600&clickTag1=http%3A//sasinator.realestate.com.au/rea/adclick/FCID%3D747915/viewid%3D1500903035682/site%3Drea/area%3Drent.resultslist/kxkuid%3Dr1hfseezi/bedmax%3D2/bedmin%3D2/pcode%3D3128/price%3D350pw_450pw/proptype%3Dhouse/region%3Dinner_east_melbourne/state%3Dvic/sub%3Dboxhill/random%3D8894212418/pos%3Dskyscraper/size%3D160x600%2C120x600%2C300x600:19)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-07-24T13:30:44.620Z] Session [389e5fb0-7074-11e7-a8e0-db0c4ce17232] - page.onError - msg: TypeError: undefined is not an object (evaluating 'f.getContext')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-07-24T13:30:44.620Z] Session [389e5fb0-7074-11e7-a8e0-db0c4ce17232] - page.onError - stack:
+  _parseData (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  a (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  handleComplete (http://content.aimatch.com/rea/6915/170404-Lindellas-728x90/728x90.html?clickTag=http%3A//sasinator.realestate.com.au/rea/adclick/FCID%3D747914/viewid%3D1500903035682/site%3Drea/area%3Drent.resultslist/kxkuid%3Dr1hfseezi/bedmax%3D2/bedmin%3D2/pcode%3D3128/price%3D350pw_450pw/proptype%3Dhouse/region%3Dinner_east_melbourne/state%3Dvic/sub%3Dboxhill/random%3D4267079213/pos%3Dheader/size%3D728x90%2C468x60&clickTag1=http%3A//sasinator.realestate.com.au/rea/adclick/FCID%3D747914/viewid%3D1500903035682/site%3Drea/area%3Drent.resultslist/kxkuid%3Dr1hfseezi/bedmax%3D2/bedmin%3D2/pcode%3D3128/price%3D350pw_450pw/proptype%3Dhouse/region%3Dinner_east_melbourne/state%3Dvic/sub%3Dboxhill/random%3D4267079213/pos%3Dheader/size%3D728x90%2C468x60:42)
+  _dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  _sendComplete (https://code.createjs.com/createjs-2015.11.26.min.js:15)
+  _loadNext (https://code.createjs.com/createjs-2015.11.26.min.js:15)
+  _handleError (https://code.createjs.com/createjs-2015.11.26.min.js:15)
+  (anonymous function) (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  _dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  handleEvent (https://code.createjs.com/createjs-2015.11.26.min.js:15)
+  (anonymous function) (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  _dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  _handleTimeout (https://code.createjs.com/createjs-2015.11.26.min.js:15)
+  (anonymous function) (https://code.createjs.com/createjs-2015.11.26.min.js:16)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-07-24T13:30:46.448Z] Session [389e5fb0-7074-11e7-a8e0-db0c4ce17232] - page.onError - msg: TypeError: undefined is not an object (evaluating 'f.getContext')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-07-24T13:30:46.448Z] Session [389e5fb0-7074-11e7-a8e0-db0c4ce17232] - page.onError - stack:
+  _parseData (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  a (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  handleComplete (http://content.aimatch.com/rea/6915/170404-Lindellas-300x600/300x600.html?clickTag=http%3A//sasinator.realestate.com.au/rea/adclick/FCID%3D747915/viewid%3D1500903035682/site%3Drea/area%3Drent.resultslist/kxkuid%3Dr1hfseezi/bedmax%3D2/bedmin%3D2/pcode%3D3128/price%3D350pw_450pw/proptype%3Dhouse/region%3Dinner_east_melbourne/state%3Dvic/sub%3Dboxhill/random%3D8894212418/pos%3Dskyscraper/size%3D160x600%2C120x600%2C300x600&clickTag1=http%3A//sasinator.realestate.com.au/rea/adclick/FCID%3D747915/viewid%3D1500903035682/site%3Drea/area%3Drent.resultslist/kxkuid%3Dr1hfseezi/bedmax%3D2/bedmin%3D2/pcode%3D3128/price%3D350pw_450pw/proptype%3Dhouse/region%3Dinner_east_melbourne/state%3Dvic/sub%3Dboxhill/random%3D8894212418/pos%3Dskyscraper/size%3D160x600%2C120x600%2C300x600:42)
+  _dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  _sendComplete (https://code.createjs.com/createjs-2015.11.26.min.js:15)
+  _loadNext (https://code.createjs.com/createjs-2015.11.26.min.js:15)
+  _handleError (https://code.createjs.com/createjs-2015.11.26.min.js:15)
+  (anonymous function) (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  _dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  handleEvent (https://code.createjs.com/createjs-2015.11.26.min.js:15)
+  (anonymous function) (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  _dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
+  _handleTimeout (https://code.createjs.com/createjs-2015.11.26.min.js:15)
+  (anonymous function) (https://code.createjs.com/createjs-2015.11.26.min.js:16)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-07-24T13:31:00.560Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1500903060513
+
+  phantomjs://platform/console++.js:263 in error

@@ -40,14 +40,12 @@ class RentinfoSpiderSpider(scrapy.Spider):
         # from scrapy.shell import inspect_response
         # inspect_response(response, self)
         # Get the proerty info url
-        i = 1;
         for property in response.xpath('//article'):
-            # 3 xpath to extract url 
+            # 3 xpath to extract url
             pre = property.xpath("div[@class='listingInfo rui-clearfix']|aside/div[@class='listingInfo rui-clearfix']|div[@class='listing-content resultBodyWrapper']/div[@class='listingInfo rui-clearfix']")
             url = pre.xpath("div[@class='vcard']/h2/a/@href").extract_first(default = 'not found').strip()
             full_url = self.start_urls[0] + url
-            print (full_url, i)
-            i += 1
+            print (full_url)
             yield scrapy.Request(full_url, callback = self.parse_info)
 
     def parse_info(self, response):
