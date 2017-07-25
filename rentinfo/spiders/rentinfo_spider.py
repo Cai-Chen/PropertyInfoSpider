@@ -50,14 +50,15 @@ class RentinfoSpiderSpider(scrapy.Spider):
 
     def parse_info(self, response):
         items = RentinfoItem()
-        items['rent'] = response.xpath('//*[@id="listing_info"]/ul/li[2]/p/text()').re('\d*')[1]
-        items['address'] = response.xpath('//*[@id="listing_address"]/h1/span[1]/text()').extract()[0].strip()
-        items['suburb'] = response.xpath('//*[@id="listing_address"]/h1/span[2]/text()').extract()[0].strip()
-        items['state'] = response.xpath('//*[@id="listing_address"]/h1/span[3]/text()').extract()[0].strip()
-        items['postcode'] = response.xpath('//*[@id="listing_address"]/h1/span[4]/text()').extract()[0].strip()
-        items['no_bedroom'] = response.xpath('//*[@id="listing_info"]/ul/li[1]/dl/dd[1]/text()').extract()[0].strip()
-        items['no_bathroom'] = response.xpath('//*[@id="listing_info"]/ul/li[1]/dl/dd[2]/text()').extract()[0].strip()
-        items['no_carspace'] = response.xpath('//*[@id="listing_info"]/ul/li[1]/dl/dd[3]/text()').extract()[0].strip()
-        items['property_type'] = response.xpath('//*[@id="listing_info"]/ul/li[1]/span/text()').extract()[0].strip()
+        pre_rent = response.xpath('//*[@id="listing_info"]/ul/li[2]/p/text()').re('\$\d*')
+        items['rent'] = pre_rent[0][1:] if len(pre_rent) > 0 else '0'
+        items['address'] = response.xpath('//*[@id="listing_address"]/h1/span[1]/text()').extract_first(default = '').strip()
+        items['suburb'] = response.xpath('//*[@id="listing_address"]/h1/span[2]/text()').extract_first(default = '').strip()
+        items['state'] = response.xpath('//*[@id="listing_address"]/h1/span[3]/text()').extract_first(default = '').strip()
+        items['postcode'] = response.xpath('//*[@id="listing_address"]/h1/span[4]/text()').extract_first(default = '').strip()
+        items['no_bedroom'] = response.xpath('//dt[@class="rui-icon rui-icon-bed"]/following-sibling::dd[1]/text()').extract_first(default = '0').strip()
+        items['no_bathroom'] = response.xpath('//dt[@class="rui-icon rui-icon-bath"]/following-sibling::dd[1]/text()').extract_first(default = '0').strip()
+        items['no_carspace'] = response.xpath('//dt[@class="rui-icon rui-icon-car"]/following-sibling::dd[1]/text()').extract_first(default = '0').strip()
+        items['property_type'] = response.xpath('//*[@id="listing_info"]/ul/li[1]/span/text()').extract_first(default = '').strip()
         items['amenities'] = response.xpath('//*[@id="features"]/div[2]/div/ul[2]/li[2]/text()').extract_first(default = '').strip()
         yield items

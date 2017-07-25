@@ -95,6 +95,7 @@ class RealestateMiddleware(object):
             # Input the location
             if spider.location is not None:
                 where = browser.find_element_by_id("where")
+                where.clear()
                 where.send_keys(spider.location)
                 # Click the property type twice to remove the auto-filled context (For Chrome)
                 # property_list = browser.find_element_by_xpath("//div[@class='condition property-select-holder']")
@@ -134,6 +135,7 @@ class RealestateMiddleware(object):
                 browser.execute_script("arguments[0].click();", maxbeds)
 
             # Click the search button
+            PIL.Image.open(io.BytesIO(browser.get_screenshot_as_png())).show()
             search_button = browser.find_element_by_xpath("//button[@class='rui-search-button']")
             search_button.click()
             time.sleep(1)

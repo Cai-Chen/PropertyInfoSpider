@@ -7,6 +7,8 @@ property_type = None (muliple options split by ,: House, unit apartment,
                       Townhouse, Villa, Land, Acreage, Rural, unitblock, retire)
 minbeds = None (Single option: Studio,  1, 2, 3, 4, 5)
 maxbeds = None (Single option: Studio,  1, 2, 3, 4, 5)
+# Output log file
+-s LOG_FILE=log.log
 
 Eg.
 scrapy crawl rentinfo_spider -a location="Box Hill, Vic 3128" -a property_type="House" -a minbeds="2" -a maxbeds="2"
