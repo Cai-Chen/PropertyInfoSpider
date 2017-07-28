@@ -2,12 +2,12 @@
 import scrapy
 from rentinfo.items import RentinfoItem
 
-class RentinfoSpiderSpider(scrapy.Spider):
-    name = 'rentinfo_spider'
+class RealestateSpider(scrapy.Spider):
+    name = 'realestate_spider'
 
     def __init__(self, channel = 'rent', location = None, property_type = None,
             minbeds = None, maxbeds = None, *args, **kwargs):
-        super(RentinfoSpiderSpider, self).__init__(*args, **kwargs)
+        super(RealestateSpider, self).__init__(*args, **kwargs)
         self.allowed_domains = ['realestate.com.au']
         self.start_urls = ['https://www.realestate.com.au']
         self.channel = channel

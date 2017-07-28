@@ -1,11 +1,12 @@
-2017-07-25 16:20:22 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: rentinfo)
-2017-07-25 16:20:22 [scrapy.utils.log] INFO: Overridden settings: {'LOG_FILE': 'log.log', 'BOT_NAME': 'rentinfo', 'NEWSPIDER_MODULE': 'rentinfo.spiders', 'COOKIES_ENABLED': False, 'SPIDER_MODULES': ['rentinfo.spiders'], 'DOWNLOAD_DELAY': 3}
-2017-07-25 16:20:22 [scrapy.middleware] INFO: Enabled extensions:
-['scrapy.extensions.corestats.CoreStats',
- 'scrapy.extensions.telnet.TelnetConsole',
+2017-07-28 17:43:50 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: rentinfo)
+2017-07-28 17:43:50 [scrapy.utils.log] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'rentinfo.spiders', 'LOG_FILE': 'log.log', 'COOKIES_ENABLED': False, 'SPIDER_MODULES': ['rentinfo.spiders'], 'BOT_NAME': 'rentinfo', 'DOWNLOAD_DELAY': 3}
+2017-07-28 17:43:50 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.logstats.LogStats']
-2017-07-25 16:20:22 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2017-07-28 17:43:51 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['rentinfo.middlewares.RealestateMiddleware',
+ 'rentinfo.middlewares.DomainMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
@@ -16,563 +17,98 @@
  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2017-07-25 16:20:22 [scrapy.middleware] INFO: Enabled spider middlewares:
+2017-07-28 17:43:51 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2017-07-25 16:20:22 [scrapy.middleware] INFO: Enabled item pipelines:
-['rentinfo.pipelines.RentinfoPipeline']
-2017-07-25 16:20:22 [scrapy.core.engine] INFO: Spider opened
-2017-07-25 16:20:22 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2017-07-25 16:20:22 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
-2017-07-25 16:20:24 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "browserName": "phantomjs", "javascriptEnabled": true, "phantomjs.page.settings.loadImages": false, "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"}, "capabilities": {"alwaysMatch": {"version": "", "platform": "ANY", "browserName": "phantomjs", "javascriptEnabled": true, "phantomjs.page.settings.loadImages": false, "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"}, "firstMatch": []}}
-2017-07-25 16:20:24 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:24 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/window/current/size {"windowHandle": "current", "height": 600, "sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "width": 800}
-2017-07-25 16:20:24 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:24 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/url {"url": "https://www.realestate.com.au", "sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad"}
-2017-07-25 16:20:37 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:37 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/element {"value": "//div[@class='rui-select-wrapper search-channel-container']/div/ul/li[@data-value='rent']", "sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "using": "xpath"}
-2017-07-25 16:20:37 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:37 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/execute {"sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "args": [{"ELEMENT": ":wdc:1500963637115", "element-6066-11e4-a52e-4f735466cecf": ":wdc:1500963637115"}], "script": "arguments[0].click();"}
-2017-07-25 16:20:37 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:39 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/element {"value": "where", "sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "using": "id"}
-2017-07-25 16:20:39 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:39 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/element/:wdc:1500963639190/clear {"sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "id": ":wdc:1500963639190"}
-2017-07-25 16:20:39 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:39 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/element/:wdc:1500963639190/value {"value": ["m", "e", "l", "b", "o", "u", "r", "n", "e", " ", "c", "i", "t", "y"], "sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "id": ":wdc:1500963639190", "text": "melbourne city"}
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/element {"value": "//div[@class='condition property-select-holder']/div/div/ul/li/input[@value='unit apartment']/parent::li", "sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "using": "xpath"}
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/execute {"sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "args": [{"ELEMENT": ":wdc:1500963639191", "element-6066-11e4-a52e-4f735466cecf": ":wdc:1500963639191"}], "script": "arguments[0].click();"}
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/execute {"sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "args": [{"ELEMENT": ":wdc:1500963639191", "element-6066-11e4-a52e-4f735466cecf": ":wdc:1500963639191"}], "script": "arguments[0].click();"}
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/execute {"sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "args": [{"ELEMENT": ":wdc:1500963639191", "element-6066-11e4-a52e-4f735466cecf": ":wdc:1500963639191"}], "script": "arguments[0].click();"}
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/element {"value": "//div[@class='min beds select-holder']/div/ul/li[@data-value='Studio']", "sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "using": "xpath"}
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/execute {"sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "args": [{"ELEMENT": ":wdc:1500963639192", "element-6066-11e4-a52e-4f735466cecf": ":wdc:1500963639192"}], "script": "arguments[0].click();"}
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/element {"value": "//div[@class='max beds select-holder']/div/ul/li[@data-value='Studio']", "sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "using": "xpath"}
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/execute {"sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "args": [{"ELEMENT": ":wdc:1500963639193", "element-6066-11e4-a52e-4f735466cecf": ":wdc:1500963639193"}], "script": "arguments[0].click();"}
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:41 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/screenshot {"sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad"}
-2017-07-25 16:20:42 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:42 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
-2017-07-25 16:20:42 [PIL.PngImagePlugin] DEBUG: STREAM b'pHYs' 41 9
-2017-07-25 16:20:42 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 62 8192
-2017-07-25 16:20:45 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/element {"value": "//button[@class='rui-search-button']", "sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "using": "xpath"}
-2017-07-25 16:20:45 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:20:45 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/element/:wdc:1500963639194/click {"sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "id": ":wdc:1500963639194"}
-2017-07-25 16:21:14 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:21:15 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/source {"sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad"}
-2017-07-25 16:21:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:21:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/element {"value": "Next", "sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "using": "link text"}
-2017-07-25 16:21:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:21:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/element/:wdc:1500963676071/click {"sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "id": ":wdc:1500963676071"}
-2017-07-25 16:21:21 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:21:22 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/source {"sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad"}
-2017-07-25 16:21:22 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:21:22 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/element {"value": "Next", "sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad", "using": "link text"}
-2017-07-25 16:21:24 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:21:24 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:62184/wd/hub/session/5845e0d0-7101-11e7-91c7-437fa0d4fdad/url {"sessionId": "5845e0d0-7101-11e7-91c7-437fa0d4fdad"}
-2017-07-25 16:21:24 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-25 16:21:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au> (referer: https://www.realestate.com.au)
-2017-07-25 16:21:24 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
-2017-07-25 16:21:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-west+melbourne-419986678> from <GET https://www.realestate.com.au/property-studio-vic-west+melbourne-419986678>
-2017-07-25 16:21:28 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-fitzroy-421602550> from <GET https://www.realestate.com.au/property-studio-vic-fitzroy-421602550>
-2017-07-25 16:21:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-melbourne-417681310> from <GET https://www.realestate.com.au/property-studio-vic-melbourne-417681310>
-2017-07-25 16:21:35 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-fitzroy-421523514> from <GET https://www.realestate.com.au/property-studio-vic-fitzroy-421523514>
-2017-07-25 16:21:39 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-carlton-421549398> from <GET https://www.realestate.com.au/property-studio-vic-carlton-421549398>
-2017-07-25 16:21:42 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-carlton+north-421588386> from <GET https://www.realestate.com.au/property-studio-vic-carlton+north-421588386>
-2017-07-25 16:21:45 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-unit-vic-carlton-421615382> from <GET https://www.realestate.com.au/property-unit-vic-carlton-421615382>
-2017-07-25 16:21:50 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-east+melbourne-421622498> from <GET https://www.realestate.com.au/property-studio-vic-east+melbourne-421622498>
-2017-07-25 16:21:54 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-melbourne-417681314> from <GET https://www.realestate.com.au/property-studio-vic-melbourne-417681314>
-2017-07-25 16:21:57 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-apartment-vic-east+melbourne-420359966> from <GET https://www.realestate.com.au/property-apartment-vic-east+melbourne-420359966>
-2017-07-25 16:22:01 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-apartment-vic-east+melbourne-420960230> from <GET https://www.realestate.com.au/property-apartment-vic-east+melbourne-420960230>
-2017-07-25 16:22:04 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421583986> from <GET https://www.realestate.com.au/property-apartment-vic-melbourne-421583986>
-2017-07-25 16:22:08 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-melbourne-421520234> from <GET https://www.realestate.com.au/property-studio-vic-melbourne-421520234>
-2017-07-25 16:22:12 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-carlton-419670010> from <GET https://www.realestate.com.au/property-studio-vic-carlton-419670010>
-2017-07-25 16:22:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421451410> from <GET https://www.realestate.com.au/property-apartment-vic-melbourne-421451410>
-2017-07-25 16:22:19 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-fitzroy+north-421459486> from <GET https://www.realestate.com.au/property-studio-vic-fitzroy+north-421459486>
-2017-07-25 16:22:22 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2017-07-25 16:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-west+melbourne-419986678> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-west+melbourne-419986678>
-{'address': '608/130 Dudley Street West Melbourne',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '1',
- 'postcode': '3003',
- 'property_type': 'Studio',
- 'rent': '335',
- 'state': 'Vic',
- 'suburb': 'West Melbourne'}
-2017-07-25 16:22:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-fitzroy-421602550> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:22:27 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-fitzroy-421602550>
-{'address': '4/201 Moor Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3065',
- 'property_type': 'Studio',
- 'rent': '350',
- 'state': 'Vic',
- 'suburb': 'Fitzroy'}
-2017-07-25 16:22:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-melbourne-417681310> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:22:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-melbourne-417681310>
-{'address': 'G3/441 Lonsdale Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3000',
- 'property_type': 'Studio',
- 'rent': '320',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:22:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-fitzroy-421523514> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:22:35 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-fitzroy-421523514>
-{'address': '1/29 King William Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3065',
- 'property_type': 'Studio',
- 'rent': '290',
- 'state': 'Vic',
- 'suburb': 'Fitzroy'}
-2017-07-25 16:22:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-carlton-421549398> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:22:40 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-carlton-421549398>
-{'address': '310/51 Rathdowne Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3053',
- 'property_type': 'Studio',
- 'rent': '320',
- 'state': 'Vic',
- 'suburb': 'Carlton'}
-2017-07-25 16:22:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-carlton+north-421588386> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:22:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-carlton+north-421588386>
-{'address': '223 Berkeley Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3054',
- 'property_type': 'Studio',
- 'rent': '300',
- 'state': 'Vic',
- 'suburb': 'Carlton North'}
-2017-07-25 16:22:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-unit-vic-carlton-421615382> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:22:48 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-unit-vic-carlton-421615382>
-{'address': '3/421 Rathdowne Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3053',
- 'property_type': 'Unit',
- 'rent': '260',
- 'state': 'Vic',
- 'suburb': 'Carlton'}
-2017-07-25 16:22:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-east+melbourne-421622498> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:22:52 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-east+melbourne-421622498>
-{'address': '20/53 Powlett Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '1',
- 'postcode': '3002',
- 'property_type': 'Studio',
- 'rent': '345',
- 'state': 'Vic',
- 'suburb': 'East Melbourne'}
-2017-07-25 16:22:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-melbourne-417681314> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:22:55 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-melbourne-417681314>
-{'address': 'G3/441 Lonsdale Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3000',
- 'property_type': 'Studio',
- 'rent': '320',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:22:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-apartment-vic-east+melbourne-420359966> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:22:58 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-apartment-vic-east+melbourne-420359966>
-{'address': '703/10 St Andrews Place',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3002',
- 'property_type': 'Apartment',
- 'rent': '545',
- 'state': 'Vic',
- 'suburb': 'East Melbourne'}
-2017-07-25 16:23:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-apartment-vic-east+melbourne-420960230> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:23:03 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-apartment-vic-east+melbourne-420960230>
-{'address': '708/10 St Andrews Place',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3002',
- 'property_type': 'Apartment',
- 'rent': '590',
- 'state': 'Vic',
- 'suburb': 'East Melbourne'}
-2017-07-25 16:23:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421583986> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:23:06 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-apartment-vic-melbourne-421583986>
-{'address': '103/79-81 Franklin St',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3000',
- 'property_type': 'Apartment',
- 'rent': '366',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:23:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-melbourne-421520234> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:23:10 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-melbourne-421520234>
-{'address': '901/81 Queens Road',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '1',
- 'postcode': '3004',
- 'property_type': 'Studio',
- 'rent': '330',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:23:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-carlton-419670010> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:23:13 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-carlton-419670010>
-{'address': '746 Swanston Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3053',
- 'property_type': 'Studio',
- 'rent': '268',
- 'state': 'Vic',
- 'suburb': 'Carlton'}
-2017-07-25 16:23:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421451410> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:23:18 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-apartment-vic-melbourne-421451410>
-{'address': 'Double Bed Studio/238 Flinders Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3000',
- 'property_type': 'Apartment',
- 'rent': '400',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:23:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-fitzroy+north-421459486> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:23:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-fitzroy+north-421459486>
-{'address': '11/33 Rae Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '1',
- 'postcode': '3068',
- 'property_type': 'Studio',
- 'rent': '280',
- 'state': 'Vic',
- 'suburb': 'Fitzroy North'}
-2017-07-25 16:23:22 [scrapy.extensions.logstats] INFO: Crawled 17 pages (at 16 pages/min), scraped 16 items (at 16 items/min)
-2017-07-25 16:23:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-melbourne-405793066> from <GET https://www.realestate.com.au/property-studio-vic-melbourne-405793066>
-2017-07-25 16:23:30 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-carlton-419670286> from <GET https://www.realestate.com.au/property-studio-vic-carlton-419670286>
-2017-07-25 16:23:34 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-apartment-vic-melbourne-420360146> from <GET https://www.realestate.com.au/property-apartment-vic-melbourne-420360146>
-2017-07-25 16:23:36 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421197230> from <GET https://www.realestate.com.au/property-apartment-vic-melbourne-421197230>
-2017-07-25 16:23:40 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-collingwood-421247162> from <GET https://www.realestate.com.au/property-studio-vic-collingwood-421247162>
-2017-07-25 16:23:45 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-abbotsford-421260950> from <GET https://www.realestate.com.au/property-studio-vic-abbotsford-421260950>
-2017-07-25 16:23:47 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-apartment-vic-carlton-420255518> from <GET https://www.realestate.com.au/property-apartment-vic-carlton-420255518>
-2017-07-25 16:23:50 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-apartment-vic-carlton-420254594> from <GET https://www.realestate.com.au/property-apartment-vic-carlton-420254594>
-2017-07-25 16:23:54 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-apartment-vic-carlton-420254806> from <GET https://www.realestate.com.au/property-apartment-vic-carlton-420254806>
-2017-07-25 16:23:57 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-carlton-419669578> from <GET https://www.realestate.com.au/property-studio-vic-carlton-419669578>
-2017-07-25 16:24:00 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421506630> from <GET https://www.realestate.com.au/property-apartment-vic-melbourne-421506630>
-2017-07-25 16:24:04 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421549270> from <GET https://www.realestate.com.au/property-apartment-vic-melbourne-421549270>
-2017-07-25 16:24:08 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-melbourne-421581562> from <GET https://www.realestate.com.au/property-studio-vic-melbourne-421581562>
-2017-07-25 16:24:11 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421581678> from <GET https://www.realestate.com.au/property-apartment-vic-melbourne-421581678>
-2017-07-25 16:24:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-melbourne-401398177> from <GET https://www.realestate.com.au/property-studio-vic-melbourne-401398177>
-2017-07-25 16:24:19 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421608402> from <GET https://www.realestate.com.au/property-apartment-vic-melbourne-421608402>
-2017-07-25 16:24:22 [scrapy.extensions.logstats] INFO: Crawled 17 pages (at 0 pages/min), scraped 16 items (at 0 items/min)
-2017-07-25 16:24:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-melbourne-405793066> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:24:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-melbourne-405793066>
-{'address': '68 Hayward Lane',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3000',
- 'property_type': 'Studio',
- 'rent': '290',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:24:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-carlton-419670286> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:24:28 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-carlton-419670286>
-{'address': '746 Swanston Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3053',
- 'property_type': 'Studio',
- 'rent': '367',
- 'state': 'Vic',
- 'suburb': 'Carlton'}
-2017-07-25 16:24:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-apartment-vic-melbourne-420360146> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:24:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-apartment-vic-melbourne-420360146>
-{'address': '',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3000',
- 'property_type': 'Apartment',
- 'rent': '545',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:24:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421197230> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:24:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-apartment-vic-melbourne-421197230>
-{'address': '300 Swanston Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '1',
- 'postcode': '3000',
- 'property_type': 'Apartment',
- 'rent': '70',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:24:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-collingwood-421247162> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:24:40 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-collingwood-421247162>
-{'address': '405M/60 Stanley Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3066',
- 'property_type': 'Studio',
- 'rent': '330',
- 'state': 'Vic',
- 'suburb': 'Collingwood'}
-2017-07-25 16:24:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-abbotsford-421260950> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:24:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-abbotsford-421260950>
-{'address': '2 Flockhart Street',
- 'amenities': 'EER (Energy Efficiency Rating):',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3067',
- 'property_type': 'Studio',
- 'rent': '0',
- 'state': 'Vic',
- 'suburb': 'Abbotsford'}
-2017-07-25 16:24:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-apartment-vic-carlton-420255518> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:24:49 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-apartment-vic-carlton-420255518>
-{'address': '9 Earl Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3053',
- 'property_type': 'Apartment',
- 'rent': '358',
- 'state': 'Vic',
- 'suburb': 'Carlton'}
-2017-07-25 16:24:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-apartment-vic-carlton-420254594> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:24:53 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-apartment-vic-carlton-420254594>
-{'address': '139 Bouverie Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3053',
- 'property_type': 'Apartment',
- 'rent': '373',
- 'state': 'Vic',
- 'suburb': 'Carlton'}
-2017-07-25 16:24:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-apartment-vic-carlton-420254806> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:24:57 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-apartment-vic-carlton-420254806>
-{'address': '22 Orr Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3053',
- 'property_type': 'Apartment',
- 'rent': '388',
- 'state': 'Vic',
- 'suburb': 'Carlton'}
-2017-07-25 16:25:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-carlton-419669578> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:25:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-carlton-419669578>
-{'address': '746  Swanston Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3053',
- 'property_type': 'Studio',
- 'rent': '263',
- 'state': 'Vic',
- 'suburb': 'Carlton'}
-2017-07-25 16:25:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421506630> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:25:05 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-apartment-vic-melbourne-421506630>
-{'address': '238 Flinders Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3000',
- 'property_type': 'Apartment',
- 'rent': '335',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:25:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421549270> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:25:08 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-apartment-vic-melbourne-421549270>
-{'address': 'Standard Studio/238 Flinders Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3000',
- 'property_type': 'Apartment',
- 'rent': '365',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:25:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-melbourne-421581562> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:25:12 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-melbourne-421581562>
-{'address': '1006/268 Flinders Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3000',
- 'property_type': 'Studio',
- 'rent': '320',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:25:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421581678> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:25:16 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-apartment-vic-melbourne-421581678>
-{'address': '321/268 Flinders Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3000',
- 'property_type': 'Apartment',
- 'rent': '320',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:25:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-melbourne-401398177> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:25:20 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-melbourne-401398177>
-{'address': '309/39 Lonsdale Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3000',
- 'property_type': 'Studio',
- 'rent': '305',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:25:22 [scrapy.extensions.logstats] INFO: Crawled 32 pages (at 15 pages/min), scraped 31 items (at 15 items/min)
-2017-07-25 16:25:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421608402> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:25:25 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-apartment-vic-melbourne-421608402>
-{'address': "3403B/120 A'Beckett Street",
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3000',
- 'property_type': 'Apartment',
- 'rent': '445',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:25:27 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421616726> from <GET https://www.realestate.com.au/property-apartment-vic-melbourne-421616726>
-2017-07-25 16:25:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421634106> from <GET https://www.realestate.com.au/property-apartment-vic-melbourne-421634106>
-2017-07-25 16:25:35 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-studio-vic-melbourne-420107754> from <GET https://www.realestate.com.au/property-studio-vic-melbourne-420107754>
-2017-07-25 16:25:39 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.realestate.com.au/property-unit-vic-melbourne-421480690> from <GET https://www.realestate.com.au/property-unit-vic-melbourne-421480690>
-2017-07-25 16:25:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421616726> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:25:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-apartment-vic-melbourne-421616726>
-{'address': '610/238 Flinders Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3000',
- 'property_type': 'Apartment',
- 'rent': '420',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:25:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-apartment-vic-melbourne-421634106> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:25:46 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-apartment-vic-melbourne-421634106>
-{'address': '546 Flinders Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3000',
- 'property_type': 'Apartment',
- 'rent': '250',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:25:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-studio-vic-melbourne-420107754> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:25:51 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-studio-vic-melbourne-420107754>
-{'address': '317/408 Lonsdale Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3000',
- 'property_type': 'Studio',
- 'rent': '370',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:25:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.realestate.com.au/property-unit-vic-melbourne-421480690> (referer: http://www.realestate.com.au/rent/property-unit+apartment-with-studio-bedrooms-in-melbourne+city+-+greater+region,+vic/list-2?maxBeds=studio)
-2017-07-25 16:25:55 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.realestate.com.au/property-unit-vic-melbourne-421480690>
-{'address': '702/243 Franklin Street',
- 'amenities': '',
- 'no_bathroom': '1',
- 'no_bedroom': '0',
- 'no_carspace': '0',
- 'postcode': '3000',
- 'property_type': 'Unit',
- 'rent': '380',
- 'state': 'Vic',
- 'suburb': 'Melbourne'}
-2017-07-25 16:25:55 [scrapy.core.engine] INFO: Closing spider (finished)
-2017-07-25 16:25:55 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{'downloader/request_bytes': 29552,
- 'downloader/request_count': 72,
- 'downloader/request_method_count/GET': 72,
- 'downloader/response_bytes': 1656993,
- 'downloader/response_count': 73,
- 'downloader/response_status_count/200': 37,
- 'downloader/response_status_count/302': 36,
+2017-07-28 17:43:51 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-07-28 17:43:51 [scrapy.core.engine] INFO: Spider opened
+2017-07-28 17:43:51 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-07-28 17:43:51 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-07-28 17:43:53 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session {"desiredCapabilities": {"browserName": "phantomjs", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36", "version": "", "javascriptEnabled": true, "platform": "ANY", "phantomjs.page.settings.loadImages": false}, "capabilities": {"firstMatch": [], "alwaysMatch": {"browserName": "phantomjs", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36", "version": "", "javascriptEnabled": true, "platform": "ANY", "phantomjs.page.settings.loadImages": false}}}
+2017-07-28 17:43:53 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:43:53 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/window/current/size {"windowHandle": "current", "width": 1024, "height": 768, "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63"}
+2017-07-28 17:43:53 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:43:53 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/url {"url": "https://www.domain.com.au", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63"}
+2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "name", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "Terms.Mode"}
+2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/execute {"args": [{"element-6066-11e4-a52e-4f735466cecf": ":wdc:1501227840596", "ELEMENT": ":wdc:1501227840596"}], "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "script": "arguments[0].setAttribute('value', 'rent');"}
+2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "xpath", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "//*[@id='react-select-3--value']/div[2]/input"}
+2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element/:wdc:1501227840597/clear {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "id": ":wdc:1501227840597"}
+2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element/:wdc:1501227840597/value {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "text": "Box Hill, Vic, 3128", "value": ["B", "o", "x", " ", "H", "i", "l", "l", ",", " ", "V", "i", "c", ",", " ", "3", "1", "2", "8"], "id": ":wdc:1501227840597"}
+2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "xpath", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "//span[text()='More options']"}
+2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element/:wdc:1501227840598/click {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "id": ":wdc:1501227840598"}
+2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "xpath", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "//span[text()='House']"}
+2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/execute {"args": [{"element-6066-11e4-a52e-4f735466cecf": ":wdc:1501227840599", "ELEMENT": ":wdc:1501227840599"}], "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "script": "arguments[0].click();"}
+2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "xpath", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "//span[text()='Apartment']"}
+2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/execute {"args": [{"element-6066-11e4-a52e-4f735466cecf": ":wdc:1501227840600", "ELEMENT": ":wdc:1501227840600"}], "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "script": "arguments[0].click();"}
+2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "name", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "Terms.Bedrooms"}
+2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/execute {"args": [{"element-6066-11e4-a52e-4f735466cecf": ":wdc:1501227840601", "ELEMENT": ":wdc:1501227840601"}], "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "script": "arguments[0].setAttribute('value', '>4');"}
+2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "name", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "Terms.Bathrooms"}
+2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/execute {"args": [{"element-6066-11e4-a52e-4f735466cecf": ":wdc:1501227840602", "ELEMENT": ":wdc:1501227840602"}], "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "script": "arguments[0].setAttribute('value', '>2');"}
+2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/screenshot {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63"}
+2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:02 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2017-07-28 17:44:02 [PIL.PngImagePlugin] DEBUG: STREAM b'pHYs' 41 9
+2017-07-28 17:44:02 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 62 8192
+2017-07-28 17:44:07 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "xpath", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "//*[@id='domain-home-content']/div[1]/form/div[1]/button"}
+2017-07-28 17:44:07 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:07 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element/:wdc:1501227840603/click {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "id": ":wdc:1501227840603"}
+2017-07-28 17:44:11 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:12 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/source {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63"}
+2017-07-28 17:44:12 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:12 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/screenshot {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63"}
+2017-07-28 17:44:14 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:14 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2017-07-28 17:44:14 [PIL.PngImagePlugin] DEBUG: STREAM b'pHYs' 41 9
+2017-07-28 17:44:14 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 62 8192
+2017-07-28 17:44:21 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "id", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "next"}
+2017-07-28 17:44:21 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:21 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/execute {"args": [{"element-6066-11e4-a52e-4f735466cecf": ":wdc:1501227861777", "ELEMENT": ":wdc:1501227861777"}], "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "script": "arguments[0].click();"}
+2017-07-28 17:44:21 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:22 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/source {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63"}
+2017-07-28 17:44:22 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:22 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/screenshot {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63"}
+2017-07-28 17:44:23 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:23 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2017-07-28 17:44:23 [PIL.PngImagePlugin] DEBUG: STREAM b'pHYs' 41 9
+2017-07-28 17:44:23 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 62 8192
+2017-07-28 17:44:30 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "id", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "next"}
+2017-07-28 17:44:31 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:31 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/url {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63"}
+2017-07-28 17:44:31 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-28 17:44:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.domain.com.au> (referer: https://www.domain.com.au)
+2017-07-28 17:44:31 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-07-28 17:44:31 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/response_bytes': 914971,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2017, 7, 25, 6, 25, 55, 279484),
- 'item_scraped_count': 36,
- 'log_count/DEBUG': 163,
- 'log_count/INFO': 12,
- 'request_depth_max': 1,
- 'response_received_count': 37,
- 'scheduler/dequeued': 73,
- 'scheduler/dequeued/memory': 73,
- 'scheduler/enqueued': 73,
- 'scheduler/enqueued/memory': 73,
- 'start_time': datetime.datetime(2017, 7, 25, 6, 20, 22, 741464)}
-2017-07-25 16:25:55 [scrapy.core.engine] INFO: Spider closed (finished)
+ 'finish_time': datetime.datetime(2017, 7, 28, 7, 44, 31, 678681),
+ 'log_count/DEBUG': 69,
+ 'log_count/INFO': 7,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 7, 28, 7, 43, 51, 210366)}
+2017-07-28 17:44:31 [scrapy.core.engine] INFO: Spider closed (finished)

@@ -64,7 +64,7 @@ class RentinfoSpiderMiddleware(object):
 # Middleware for realestate website
 class RealestateMiddleware(object):
     def process_request(self, request, spider):
-        if spider.name == "rentinfo_spider" and 'Selenium' in request.meta:
+        if spider.name == "realestate_spider" and 'Selenium' in request.meta:
             # Chrome Driver config
             # chromeDriver = "D:\setup\chromedriver.exe"
             # browser = webdriver.Chrome(executable_path = chromeDriver)
@@ -145,6 +145,74 @@ class RealestateMiddleware(object):
                 try:
                     # Click next page button
                     browser.find_element_by_link_text('Next').click()
+                    time.sleep(1)
+                    # Add next page into body
+                    body += browser.page_source
+                except selenium.common.exceptions.NoSuchElementException as e:
+                    print ('Page crawling completed.')
+                    break
+            return HtmlResponse(browser.current_url, body=body, encoding='utf-8', request=request)
+        else:
+            return None
+
+# Middleware for domain website
+class DomainMiddleware(object):
+    def process_request(self, request, spider):
+        if spider.name == "domain_spider" and 'Selenium' in request.meta:
+            # PhantomJS config
+            dcap = dict(DesiredCapabilities.PHANTOMJS)
+            dcap["phantomjs.page.settings.userAgent"] = ("Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36")
+            dcap["phantomjs.page.settings.loadImages"] = False
+            browser = webdriver.PhantomJS(desired_capabilities=dcap)
+            browser.set_window_size(1024, 768)
+
+            # Open the url
+            browser.get(request.url)
+            # PIL.Image.open(io.BytesIO(browser.get_screenshot_as_png())).show()
+
+            # Click the channel list
+            channel = browser.find_element_by_name("Terms.Mode")
+            browser.execute_script("arguments[0].setAttribute('value', '"+ spider.channel +"');", channel)
+            # Input the location
+            if spider.location is not None:
+                where = browser.find_element_by_xpath("//*[@id='react-select-3--value']/div[2]/input")
+                where.clear()
+                where.send_keys(spider.location)
+                time.sleep(1)
+            # Find the property type list
+            if spider.property_type is not None:
+                # Click the more options button to unfold the options
+                more_options = browser.find_element_by_xpath("//span[text()='More options']")
+                more_options.click()
+                # Choose the property type
+                for property_type in spider.property_type:
+                    property = browser.find_element_by_xpath("//span[text()='" + property_type + "']")
+                    browser.execute_script("arguments[0].click();", property)
+            # Bedrooms
+            if spider.bedrooms is not None:
+                # Choose the bedrooms
+                bedrooms = browser.find_element_by_name("Terms.Bedrooms")
+                browser.execute_script("arguments[0].setAttribute('value', '"+ spider.bedrooms +"');", bedrooms)
+            # Bathrooms
+            if spider.bathrooms is not None:
+                # Choose the bathrooms
+                bathrooms = browser.find_element_by_name("Terms.Bathrooms")
+                browser.execute_script("arguments[0].setAttribute('value', '"+ spider.bathrooms +"');", bathrooms)
+
+            # Click the search button
+            PIL.Image.open(io.BytesIO(browser.get_screenshot_as_png())).show()
+            search_button = browser.find_element_by_xpath("//*[@id='domain-home-content']/div[1]/form/div[1]/button")
+            search_button.click()
+            time.sleep(1)
+            # Put first page into body
+            body = browser.page_source
+            while True:
+                try:
+                    PIL.Image.open(io.BytesIO(browser.get_screenshot_as_png())).show()
+                    # Click next page button
+                    # It has to use Javascript to click
+                    next = browser.find_element_by_id('next')
+                    browser.execute_script("arguments[0].click();", next)
                     time.sleep(1)
                     # Add next page into body
                     body += browser.page_source

@@ -1,53 +1,47 @@
-[INFO  - 2017-07-25T07:07:34.557Z] GhostDriver - Main - running on port 63050
-[INFO  - 2017-07-25T07:07:35.078Z] Session [ef3fb910-7107-11e7-961e-b778e5828e80] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36","webSecurityEnabled":true}
-[INFO  - 2017-07-25T07:07:35.078Z] Session [ef3fb910-7107-11e7-961e-b778e5828e80] - page.customHeaders:  - {}
-[INFO  - 2017-07-25T07:07:35.078Z] Session [ef3fb910-7107-11e7-961e-b778e5828e80] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"},"phantomjs.page.settings.userAgent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36","phantomjs.page.settings.loadImages":false}
-[INFO  - 2017-07-25T07:07:35.079Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: ef3fb910-7107-11e7-961e-b778e5828e80
-[ERROR - 2017-07-25T07:07:43.026Z] Session [ef3fb910-7107-11e7-961e-b778e5828e80] - page.onError - msg: TypeError: null is not an object (evaluating 'document.getElementById("MCbutton"+e).style')
+[INFO  - 2017-07-28T07:43:53.148Z] GhostDriver - Main - running on port 57125
+[INFO  - 2017-07-28T07:43:53.307Z] Session [80d03050-7368-11e7-ac45-a1a0c47bab63] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36","webSecurityEnabled":true}
+[INFO  - 2017-07-28T07:43:53.307Z] Session [80d03050-7368-11e7-ac45-a1a0c47bab63] - page.customHeaders:  - {}
+[INFO  - 2017-07-28T07:43:53.307Z] Session [80d03050-7368-11e7-ac45-a1a0c47bab63] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"},"phantomjs.page.settings.userAgent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36","phantomjs.page.settings.loadImages":false}
+[INFO  - 2017-07-28T07:43:53.307Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 80d03050-7368-11e7-ac45-a1a0c47bab63
+[ERROR - 2017-07-28T07:43:57.838Z] Session [80d03050-7368-11e7-ac45-a1a0c47bab63] - page.onError - msg: Error: service worker is not supported
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-25T07:07:43.026Z] Session [ef3fb910-7107-11e7-961e-b778e5828e80] - page.onError - stack:
-  global code (https://www.realestate.com.au/rent:3)
-  writeln (:0)
+[ERROR - 2017-07-28T07:43:57.838Z] Session [80d03050-7368-11e7-ac45-a1a0c47bab63] - page.onError - stack:
+  handleError (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-pa-domain-home/@domain-group_fe-pa-domain-home_6.2.5_1.2.1_client.js:10621)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-25T07:07:54.728Z] Session [ef3fb910-7107-11e7-961e-b778e5828e80] - page.onError - msg: ReferenceError: Can't find variable: getParameter
+[ERROR - 2017-07-28T07:44:09.231Z] Session [80d03050-7368-11e7-ac45-a1a0c47bab63] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'Object.assign(createInstance, _extends({}, driverType))')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-25T07:07:54.728Z] Session [ef3fb910-7107-11e7-961e-b778e5828e80] - page.onError - stack:
-  global code (http://content.aimatch.com/rea/6915/170404-Lindellas-728x90/728x90.html?clickTag=http%3A//sasinator.realestate.com.au/rea/adclick/FCID%3D747914/viewid%3D1500966473305/site%3Drea/area%3Drent.resultslist/kxkuid%3Dr1j8jc3kw/bedmax%3D2/bedmin%3D2/pcode%3D3128/price%3D350pw_450pw/proptype%3Dhouse/region%3Dinner_east_melbourne/state%3Dvic/sub%3Dboxhill/random%3D1378617139/pos%3Dheader/size%3D728x90%2C468x60&clickTag1=http%3A//sasinator.realestate.com.au/rea/adclick/FCID%3D747914/viewid%3D1500966473305/site%3Drea/area%3Drent.resultslist/kxkuid%3Dr1j8jc3kw/bedmax%3D2/bedmin%3D2/pcode%3D3128/price%3D350pw_450pw/proptype%3Dhouse/region%3Dinner_east_melbourne/state%3Dvic/sub%3Dboxhill/random%3D1378617139/pos%3Dheader/size%3D728x90%2C468x60:19)
+[ERROR - 2017-07-28T07:44:09.231Z] Session [80d03050-7368-11e7-ac45-a1a0c47bab63] - page.onError - stack:
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:3245)
+  s (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:1)
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:1)
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:2938)
+  s (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:1)
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:1)
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:2149)
+  s (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:1)
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:1)
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:2063)
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:2143)
+  s (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:1)
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:1)
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:733)
+  s (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:1)
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:1)
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:74)
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:75)
+  s (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:1)
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:1)
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:69)
+  s (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:1)
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:1)
+  (anonymous function) (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:2)
+  s (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:1)
+  e (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-co-header-desktop/@domain-group_fe-co-header-desktop_1.0.0_1.2.1_client.js:1)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-25T07:07:56.381Z] Session [ef3fb910-7107-11e7-961e-b778e5828e80] - page.onError - msg: ReferenceError: Can't find variable: getParameter
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-25T07:07:56.381Z] Session [ef3fb910-7107-11e7-961e-b778e5828e80] - page.onError - stack:
-  global code (http://content.aimatch.com/rea/6915/170404-Lindellas-300x600/300x600.html?clickTag=http%3A//sasinator.realestate.com.au/rea/adclick/FCID%3D747915/viewid%3D1500966473305/site%3Drea/area%3Drent.resultslist/kxkuid%3Dr1j8jc3kw/bedmax%3D2/bedmin%3D2/pcode%3D3128/price%3D350pw_450pw/proptype%3Dhouse/region%3Dinner_east_melbourne/state%3Dvic/sub%3Dboxhill/random%3D3362589168/pos%3Dskyscraper/size%3D160x600%2C120x600%2C300x600&clickTag1=http%3A//sasinator.realestate.com.au/rea/adclick/FCID%3D747915/viewid%3D1500966473305/site%3Drea/area%3Drent.resultslist/kxkuid%3Dr1j8jc3kw/bedmax%3D2/bedmin%3D2/pcode%3D3128/price%3D350pw_450pw/proptype%3Dhouse/region%3Dinner_east_melbourne/state%3Dvic/sub%3Dboxhill/random%3D3362589168/pos%3Dskyscraper/size%3D160x600%2C120x600%2C300x600:19)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-25T07:08:02.935Z] Session [ef3fb910-7107-11e7-961e-b778e5828e80] - page.onError - msg: TypeError: undefined is not an object (evaluating 'f.getContext')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-25T07:08:02.935Z] Session [ef3fb910-7107-11e7-961e-b778e5828e80] - page.onError - stack:
-  _parseData (https://code.createjs.com/createjs-2015.11.26.min.js:12)
-  a (https://code.createjs.com/createjs-2015.11.26.min.js:12)
-  handleComplete (http://content.aimatch.com/rea/6915/170404-Lindellas-728x90/728x90.html?clickTag=http%3A//sasinator.realestate.com.au/rea/adclick/FCID%3D747914/viewid%3D1500966473305/site%3Drea/area%3Drent.resultslist/kxkuid%3Dr1j8jc3kw/bedmax%3D2/bedmin%3D2/pcode%3D3128/price%3D350pw_450pw/proptype%3Dhouse/region%3Dinner_east_melbourne/state%3Dvic/sub%3Dboxhill/random%3D1378617139/pos%3Dheader/size%3D728x90%2C468x60&clickTag1=http%3A//sasinator.realestate.com.au/rea/adclick/FCID%3D747914/viewid%3D1500966473305/site%3Drea/area%3Drent.resultslist/kxkuid%3Dr1j8jc3kw/bedmax%3D2/bedmin%3D2/pcode%3D3128/price%3D350pw_450pw/proptype%3Dhouse/region%3Dinner_east_melbourne/state%3Dvic/sub%3Dboxhill/random%3D1378617139/pos%3Dheader/size%3D728x90%2C468x60:42)
-  _dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
-  dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
-  _sendComplete (https://code.createjs.com/createjs-2015.11.26.min.js:15)
-  _loadNext (https://code.createjs.com/createjs-2015.11.26.min.js:15)
-  _handleError (https://code.createjs.com/createjs-2015.11.26.min.js:15)
-  (anonymous function) (https://code.createjs.com/createjs-2015.11.26.min.js:12)
-  _dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
-  dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
-  handleEvent (https://code.createjs.com/createjs-2015.11.26.min.js:15)
-  (anonymous function) (https://code.createjs.com/createjs-2015.11.26.min.js:12)
-  _dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
-  dispatchEvent (https://code.createjs.com/createjs-2015.11.26.min.js:12)
-  _handleTimeout (https://code.createjs.com/createjs-2015.11.26.min.js:15)
-  (anonymous function) (https://code.createjs.com/createjs-2015.11.26.min.js:16)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-25T07:08:09.949Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1500966489921
+[ERROR - 2017-07-28T07:44:30.555Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1501227870533
 
   phantomjs://platform/console++.js:263 in error
