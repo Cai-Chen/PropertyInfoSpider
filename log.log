@@ -1,10 +1,10 @@
-2017-07-28 17:43:50 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: rentinfo)
-2017-07-28 17:43:50 [scrapy.utils.log] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'rentinfo.spiders', 'LOG_FILE': 'log.log', 'COOKIES_ENABLED': False, 'SPIDER_MODULES': ['rentinfo.spiders'], 'BOT_NAME': 'rentinfo', 'DOWNLOAD_DELAY': 3}
-2017-07-28 17:43:50 [scrapy.middleware] INFO: Enabled extensions:
-['scrapy.extensions.telnet.TelnetConsole',
- 'scrapy.extensions.corestats.CoreStats',
- 'scrapy.extensions.logstats.LogStats']
-2017-07-28 17:43:51 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2017-07-29 22:02:43 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: rentinfo)
+2017-07-29 22:02:43 [scrapy.utils.log] INFO: Overridden settings: {'COOKIES_ENABLED': False, 'SPIDER_MODULES': ['rentinfo.spiders'], 'NEWSPIDER_MODULE': 'rentinfo.spiders', 'DOWNLOAD_DELAY': 3, 'LOG_FILE': 'log.log', 'BOT_NAME': 'rentinfo'}
+2017-07-29 22:02:43 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2017-07-29 22:02:43 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['rentinfo.middlewares.RealestateMiddleware',
  'rentinfo.middlewares.DomainMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
@@ -17,98 +17,77 @@
  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2017-07-28 17:43:51 [scrapy.middleware] INFO: Enabled spider middlewares:
+2017-07-29 22:02:43 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2017-07-28 17:43:51 [scrapy.middleware] INFO: Enabled item pipelines:
+2017-07-29 22:02:43 [scrapy.middleware] INFO: Enabled item pipelines:
 []
-2017-07-28 17:43:51 [scrapy.core.engine] INFO: Spider opened
-2017-07-28 17:43:51 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2017-07-28 17:43:51 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
-2017-07-28 17:43:53 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session {"desiredCapabilities": {"browserName": "phantomjs", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36", "version": "", "javascriptEnabled": true, "platform": "ANY", "phantomjs.page.settings.loadImages": false}, "capabilities": {"firstMatch": [], "alwaysMatch": {"browserName": "phantomjs", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36", "version": "", "javascriptEnabled": true, "platform": "ANY", "phantomjs.page.settings.loadImages": false}}}
-2017-07-28 17:43:53 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:43:53 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/window/current/size {"windowHandle": "current", "width": 1024, "height": 768, "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63"}
-2017-07-28 17:43:53 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:43:53 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/url {"url": "https://www.domain.com.au", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63"}
-2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "name", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "Terms.Mode"}
-2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/execute {"args": [{"element-6066-11e4-a52e-4f735466cecf": ":wdc:1501227840596", "ELEMENT": ":wdc:1501227840596"}], "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "script": "arguments[0].setAttribute('value', 'rent');"}
-2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "xpath", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "//*[@id='react-select-3--value']/div[2]/input"}
-2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element/:wdc:1501227840597/clear {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "id": ":wdc:1501227840597"}
-2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element/:wdc:1501227840597/value {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "text": "Box Hill, Vic, 3128", "value": ["B", "o", "x", " ", "H", "i", "l", "l", ",", " ", "V", "i", "c", ",", " ", "3", "1", "2", "8"], "id": ":wdc:1501227840597"}
-2017-07-28 17:44:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "xpath", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "//span[text()='More options']"}
-2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element/:wdc:1501227840598/click {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "id": ":wdc:1501227840598"}
-2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "xpath", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "//span[text()='House']"}
-2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/execute {"args": [{"element-6066-11e4-a52e-4f735466cecf": ":wdc:1501227840599", "ELEMENT": ":wdc:1501227840599"}], "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "script": "arguments[0].click();"}
-2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "xpath", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "//span[text()='Apartment']"}
-2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/execute {"args": [{"element-6066-11e4-a52e-4f735466cecf": ":wdc:1501227840600", "ELEMENT": ":wdc:1501227840600"}], "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "script": "arguments[0].click();"}
-2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "name", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "Terms.Bedrooms"}
-2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/execute {"args": [{"element-6066-11e4-a52e-4f735466cecf": ":wdc:1501227840601", "ELEMENT": ":wdc:1501227840601"}], "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "script": "arguments[0].setAttribute('value', '>4');"}
-2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "name", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "Terms.Bathrooms"}
-2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/execute {"args": [{"element-6066-11e4-a52e-4f735466cecf": ":wdc:1501227840602", "ELEMENT": ":wdc:1501227840602"}], "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "script": "arguments[0].setAttribute('value', '>2');"}
-2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/screenshot {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63"}
-2017-07-28 17:44:02 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:02 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
-2017-07-28 17:44:02 [PIL.PngImagePlugin] DEBUG: STREAM b'pHYs' 41 9
-2017-07-28 17:44:02 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 62 8192
-2017-07-28 17:44:07 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "xpath", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "//*[@id='domain-home-content']/div[1]/form/div[1]/button"}
-2017-07-28 17:44:07 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:07 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element/:wdc:1501227840603/click {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "id": ":wdc:1501227840603"}
-2017-07-28 17:44:11 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:12 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/source {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63"}
-2017-07-28 17:44:12 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:12 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/screenshot {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63"}
-2017-07-28 17:44:14 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:14 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
-2017-07-28 17:44:14 [PIL.PngImagePlugin] DEBUG: STREAM b'pHYs' 41 9
-2017-07-28 17:44:14 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 62 8192
-2017-07-28 17:44:21 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "id", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "next"}
-2017-07-28 17:44:21 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:21 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/execute {"args": [{"element-6066-11e4-a52e-4f735466cecf": ":wdc:1501227861777", "ELEMENT": ":wdc:1501227861777"}], "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "script": "arguments[0].click();"}
-2017-07-28 17:44:21 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:22 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/source {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63"}
-2017-07-28 17:44:22 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:22 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/screenshot {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63"}
-2017-07-28 17:44:23 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:23 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
-2017-07-28 17:44:23 [PIL.PngImagePlugin] DEBUG: STREAM b'pHYs' 41 9
-2017-07-28 17:44:23 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 62 8192
-2017-07-28 17:44:30 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/element {"using": "id", "sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63", "value": "next"}
-2017-07-28 17:44:31 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:31 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:57125/wd/hub/session/80d03050-7368-11e7-ac45-a1a0c47bab63/url {"sessionId": "80d03050-7368-11e7-ac45-a1a0c47bab63"}
-2017-07-28 17:44:31 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2017-07-28 17:44:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.domain.com.au> (referer: https://www.domain.com.au)
-2017-07-28 17:44:31 [scrapy.core.engine] INFO: Closing spider (finished)
-2017-07-28 17:44:31 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{'downloader/response_bytes': 914971,
+2017-07-29 22:02:43 [scrapy.core.engine] INFO: Spider opened
+2017-07-29 22:02:43 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-07-29 22:02:43 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6024
+2017-07-29 22:02:46 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session {"desiredCapabilities": {"version": "", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36", "javascriptEnabled": true, "phantomjs.page.settings.loadImages": false, "platform": "ANY", "browserName": "phantomjs"}, "capabilities": {"firstMatch": [], "alwaysMatch": {"version": "", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36", "javascriptEnabled": true, "phantomjs.page.settings.loadImages": false, "platform": "ANY", "browserName": "phantomjs"}}}
+2017-07-29 22:02:46 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:46 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/window/current/size {"height": 768, "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a", "width": 1024, "windowHandle": "current"}
+2017-07-29 22:02:46 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:46 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/url {"sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a", "url": "https://www.domain.com.au"}
+2017-07-29 22:02:53 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:53 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/element {"using": "name", "value": "Terms.Mode", "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a"}
+2017-07-29 22:02:53 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:53 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/execute {"args": [{"ELEMENT": ":wdc:1501329773225", "element-6066-11e4-a52e-4f735466cecf": ":wdc:1501329773225"}], "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a", "script": "arguments[0].setAttribute('value', 'rent');"}
+2017-07-29 22:02:53 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:53 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/element {"using": "xpath", "value": "//*[@id='react-select-3--value']/div[2]/input", "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a"}
+2017-07-29 22:02:53 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:53 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/element/:wdc:1501329773226/clear {"id": ":wdc:1501329773226", "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a"}
+2017-07-29 22:02:53 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:53 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/element/:wdc:1501329773226/value {"value": ["B", "o", "x", " ", "H", "i", "l", "l", ",", " ", "V", "i", "c", ",", " ", "3", "1", "2", "8"], "id": ":wdc:1501329773226", "text": "Box Hill, Vic, 3128", "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a"}
+2017-07-29 22:02:53 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/element {"using": "xpath", "value": "//span[text()='More options']", "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a"}
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/element/:wdc:1501329773227/click {"id": ":wdc:1501329773227", "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a"}
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/element {"using": "xpath", "value": "//span[text()='House']", "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a"}
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/execute {"args": [{"ELEMENT": ":wdc:1501329773228", "element-6066-11e4-a52e-4f735466cecf": ":wdc:1501329773228"}], "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a", "script": "arguments[0].click();"}
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/element {"using": "xpath", "value": "//span[text()='Apartment']", "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a"}
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/execute {"args": [{"ELEMENT": ":wdc:1501329773229", "element-6066-11e4-a52e-4f735466cecf": ":wdc:1501329773229"}], "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a", "script": "arguments[0].click();"}
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/element {"using": "name", "value": "Terms.Bedrooms", "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a"}
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/execute {"args": [{"ELEMENT": ":wdc:1501329773230", "element-6066-11e4-a52e-4f735466cecf": ":wdc:1501329773230"}], "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a", "script": "arguments[0].setAttribute('value', '>4');"}
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/element {"using": "name", "value": "Terms.Bathrooms", "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a"}
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/execute {"args": [{"ELEMENT": ":wdc:1501329773231", "element-6066-11e4-a52e-4f735466cecf": ":wdc:1501329773231"}], "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a", "script": "arguments[0].setAttribute('value', '>2');"}
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/element {"using": "xpath", "value": "//*[@id='domain-home-content']/div[1]/form/div[1]/button", "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a"}
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/execute {"args": [{"ELEMENT": ":wdc:1501329773232", "element-6066-11e4-a52e-4f735466cecf": ":wdc:1501329773232"}], "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a", "script": "arguments[0].click();"}
+2017-07-29 22:02:54 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:55 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/source {"sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a"}
+2017-07-29 22:02:55 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:55 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/element {"using": "id", "value": "next", "sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a"}
+2017-07-29 22:02:55 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:55 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:58978/wd/hub/session/d5736080-7455-11e7-8ba7-8ff16436688a/url {"sessionId": "d5736080-7455-11e7-8ba7-8ff16436688a"}
+2017-07-29 22:02:55 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2017-07-29 22:02:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.domain.com.au> (referer: https://www.domain.com.au)
+2017-07-29 22:02:56 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-07-29 22:02:56 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/response_bytes': 26303,
  'downloader/response_count': 1,
  'downloader/response_status_count/200': 1,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2017, 7, 28, 7, 44, 31, 678681),
- 'log_count/DEBUG': 69,
+ 'finish_time': datetime.datetime(2017, 7, 29, 12, 2, 56, 170804),
+ 'log_count/DEBUG': 48,
  'log_count/INFO': 7,
  'response_received_count': 1,
  'scheduler/dequeued': 1,
  'scheduler/dequeued/memory': 1,
  'scheduler/enqueued': 1,
  'scheduler/enqueued/memory': 1,
- 'start_time': datetime.datetime(2017, 7, 28, 7, 43, 51, 210366)}
-2017-07-28 17:44:31 [scrapy.core.engine] INFO: Spider closed (finished)
+ 'start_time': datetime.datetime(2017, 7, 29, 12, 2, 43, 974106)}
+2017-07-29 22:02:56 [scrapy.core.engine] INFO: Spider closed (finished)

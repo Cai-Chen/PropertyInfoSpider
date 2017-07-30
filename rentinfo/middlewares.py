@@ -135,7 +135,7 @@ class RealestateMiddleware(object):
                 browser.execute_script("arguments[0].click();", maxbeds)
 
             # Click the search button
-            PIL.Image.open(io.BytesIO(browser.get_screenshot_as_png())).show()
+            # PIL.Image.open(io.BytesIO(browser.get_screenshot_as_png())).show()
             search_button = browser.find_element_by_xpath("//button[@class='rui-search-button']")
             search_button.click()
             time.sleep(1)
@@ -200,7 +200,7 @@ class DomainMiddleware(object):
                 browser.execute_script("arguments[0].setAttribute('value', '"+ spider.bathrooms +"');", bathrooms)
 
             # Click the search button
-            PIL.Image.open(io.BytesIO(browser.get_screenshot_as_png())).show()
+            # PIL.Image.open(io.BytesIO(browser.get_screenshot_as_png())).show()
             search_button = browser.find_element_by_xpath("//*[@id='domain-home-content']/div[1]/form/div[1]/button")
             search_button.click()
             time.sleep(1)
@@ -208,7 +208,7 @@ class DomainMiddleware(object):
             body = browser.page_source
             while True:
                 try:
-                    PIL.Image.open(io.BytesIO(browser.get_screenshot_as_png())).show()
+                    # PIL.Image.open(io.BytesIO(browser.get_screenshot_as_png())).show()
                     # Click next page button
                     # It has to use Javascript to click
                     next = browser.find_element_by_id('next')

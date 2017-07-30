@@ -44,18 +44,33 @@ class DomainSpider(scrapy.Spider):
             pre = sel.xpath("div/div/div/h2|div/div/div/div/h2|div/div")
             url = pre.xpath("a/@href").extract_first(default = 'not found').strip()
             print (url)
-            # yield scrapy.Request(url, callback = self.parse_info)
+            # Get the address, suburb, state, postcode and put them into meta data of the request
+            address = pre.xpath("a/div/div/div[1]/span/text()").extract_first(default = '').strip()
+            suburb = pre.xpath("a/div/div/div[2]/span[1]/text()").extract_first(default = '').strip()
+            state = pre.xpath("a/div/div/div[2]/span[2]/text()").extract_first(default = '').strip()
+            postcode = pre.xpath("a/div/div/div[2]/span[3]/text()").extract_first(default = '').strip()
+            req = scrapy.Request(url, callback = self.parse_info)
+            req.meta['address'] = address
+            req.meta['suburb'] = suburb
+            req.meta['state'] = state
+            req.meta['postcode'] = postcode
+            yield req
 
     def parse_info(self, response):
         items = RentinfoItem()
-        items['rent'] = 0
-        items['address'] = 1
-        items['suburb'] = 2
-        items['state'] = 3
-        items['postcode'] = 4
-        items['no_bedroom'] = 5
-        items['no_bathroom'] = 6
-        items['no_carspace'] = 7
-        items['property_type'] = 8
-        items['amenities'] = 9
+        pre_rent = response.xpath('//*[@id="main"]/div/header/div/div[1]/span/text()').re('\$\d*,?\d*')
+        items['rent'] = pre_rent[0][1:].replace(',', '') if len(pre_rent) > 0 else '0'
+        items['address'] = response.meta['address']
+        items['suburb'] = response.meta['suburb']
+        items['state'] = response.meta['state']
+        items['postcode'] = response.meta['postcode']
+        items['no_bedroom'] = response.xpath('//span[@class="icon domain-icon-ic_beds"][1]/following-sibling::span/em/text()').extract_first(default = '0').strip()
+        items['no_bedroom'] = 0 if items['no_bedroom'] == '-' else items['no_bedroom']
+        items['no_bathroom'] = response.xpath('//span[@class="icon domain-icon-ic_baths"][1]/following-sibling::span/em/text()').extract_first(default = '0').strip()
+        items['no_bathroom'] = 0 if items['no_bathroom'] == '-' else items['no_bathroom']
+        items['no_carspace'] = response.xpath('//span[@class="icon domain-icon-ic_cars"][1]/following-sibling::span/em/text()').extract_first(default = '0').strip()
+        items['no_carspace'] = 0 if items['no_carspace'] == '-' else items['no_carspace']
+        items['property_type'] = response.xpath('//*[@id="description"]/ul/li/strong/text()|//*[@id="description"]/ul[2]/li/strong/text()').extract_first(default = '').strip()
+        pre_amenities = response.xpath('//h4[text()="Features"]/following-sibling::ul[1]/li/text()').extract()
+        items['amenities'] = ' '.join(pre_amenities)
         yield items

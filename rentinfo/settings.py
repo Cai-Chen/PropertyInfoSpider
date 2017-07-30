@@ -65,9 +65,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#    'rentinfo.pipelines.RentinfoPipeline': 300,
-# }
+ITEM_PIPELINES = {
+   'rentinfo.pipelines.RentinfoPipeline': 300,
+}
 
 #Mysql config
 MYSQL_HOST = '127.0.0.1'
