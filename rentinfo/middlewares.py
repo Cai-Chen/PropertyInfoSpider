@@ -133,6 +133,9 @@ class RealestateMiddleware(object):
                 maxbeds = browser.find_element_by_xpath("//div[@class='max beds select-holder']/div/ul/li[@data-value='"+ spider.maxbeds +"']")
                 # maxbeds.click()
                 browser.execute_script("arguments[0].click();", maxbeds)
+            # Unclick the Surrounding suburbs
+            surrSuburbs = browser.find_element_by_xpath("//*[@id='includeSurrounding']")
+            browser.execute_script("arguments[0].click();", surrSuburbs)
 
             # Click the search button
             # PIL.Image.open(io.BytesIO(browser.get_screenshot_as_png())).show()
@@ -143,6 +146,7 @@ class RealestateMiddleware(object):
             body = browser.page_source
             while True:
                 try:
+                    print (browser.current_url)
                     # Click next page button
                     browser.find_element_by_link_text('Next').click()
                     time.sleep(1)

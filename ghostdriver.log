@@ -1,15 +1,112 @@
-[INFO  - 2017-07-29T12:02:45.610Z] GhostDriver - Main - running on port 58978
-[INFO  - 2017-07-29T12:02:46.030Z] Session [d5736080-7455-11e7-8ba7-8ff16436688a] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36","webSecurityEnabled":true}
-[INFO  - 2017-07-29T12:02:46.030Z] Session [d5736080-7455-11e7-8ba7-8ff16436688a] - page.customHeaders:  - {}
-[INFO  - 2017-07-29T12:02:46.030Z] Session [d5736080-7455-11e7-8ba7-8ff16436688a] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"},"phantomjs.page.settings.userAgent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36","phantomjs.page.settings.loadImages":false}
-[INFO  - 2017-07-29T12:02:46.030Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d5736080-7455-11e7-8ba7-8ff16436688a
-[ERROR - 2017-07-29T12:02:50.415Z] Session [d5736080-7455-11e7-8ba7-8ff16436688a] - page.onError - msg: Error: service worker is not supported
+[INFO  - 2017-08-13T08:45:26.884Z] GhostDriver - Main - running on port 53037
+[INFO  - 2017-08-13T08:45:27.419Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36","webSecurityEnabled":true}
+[INFO  - 2017-08-13T08:45:27.419Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.customHeaders:  - {}
+[INFO  - 2017-08-13T08:45:27.419Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"},"phantomjs.page.settings.userAgent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36","phantomjs.page.settings.loadImages":false}
+[INFO  - 2017-08-13T08:45:27.419Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: c14807f0-8003-11e7-94e5-e5d4c932781e
+[ERROR - 2017-08-13T08:45:34.018Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - msg: TypeError: null is not an object (evaluating 'document.getElementById("MCbutton"+e).style')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-29T12:02:50.416Z] Session [d5736080-7455-11e7-8ba7-8ff16436688a] - page.onError - stack:
-  handleError (https://renderizr-assets.domainstatic.com.au/@domain-group/fe-pa-domain-home/@domain-group_fe-pa-domain-home_6.2.5_1.2.1_client.js:10621)
+[ERROR - 2017-08-13T08:45:34.019Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - stack:
+  global code (https://www.realestate.com.au/rent:3)
+  writeln (:0)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-29T12:02:55.985Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1501329775952
+[ERROR - 2017-08-13T08:45:46.541Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'document.lastChild.append(rubnewscrpt)')
 
   phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:45:46.541Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - stack:
+  (anonymous function) (https://sasinator.realestate.com.au/rea/hserver/viewid=1502613943639/site=rea/area=rent.resultslist/kxkuid=r3n1tzlw5/bedmax=6/bedmin=0/pcode=3000/price=450pw_600pw/proptype=apartment/region=melbourne_city___greater_region/state=vic/sub=melbourne/random=4679710483/pos=footer/size=728x90:100)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:45:51.275Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'document.lastChild.append(rubnewscrpt)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:45:51.275Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - stack:
+  (anonymous function) (https://sasinator.realestate.com.au/rea/hserver/viewid=1502613949101/site=rea/area=rent.resultslist/kxkuid=r3n1tzlw5/bedmax=6/bedmin=0/pcode=3000/price=350pw_450pw/proptype=apartment/region=melbourne_city___greater_region/state=vic/sub=melbourne/random=6509043020/pos=footer/size=728x90:100)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:46:25.070Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'document.lastChild.append(rubnewscrpt)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:46:25.070Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - stack:
+  (anonymous function) (https://sasinator.realestate.com.au/rea/hserver/viewid=1502613982538/site=rea/area=rent.resultslist/kxkuid=r3n1tzlw5/bedmax=6/bedmin=0/pcode=3000/price=600pw_750pw/proptype=apartment/region=melbourne_city___greater_region/state=vic/sub=melbourne/random=26839701/pos=footer/size=728x90:100)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:46:33.123Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'document.lastChild.append(rubnewscrpt)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:46:33.123Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - stack:
+  (anonymous function) (https://sasinator.realestate.com.au/rea/hserver/viewid=1502613990667/site=rea/area=rent.resultslist/kxkuid=r3n1tzlw5/bedmax=6/bedmin=0/pcode=3000/price=450pw_600pw/proptype=apartment/region=melbourne_city___greater_region/state=vic/sub=melbourne/random=3856519670/pos=footer/size=728x90:100)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:46:39.063Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'document.lastChild.append(rubnewscrpt)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:46:39.063Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - stack:
+  (anonymous function) (https://sasinator.realestate.com.au/rea/hserver/viewid=1502613995581/site=rea/area=rent.resultslist/kxkuid=r3n1tzlw5/bedmax=6/bedmin=0/pcode=3000/price=600pw_750pw/proptype=apartment/region=melbourne_city___greater_region/state=vic/sub=melbourne/random=7651514094/pos=footer/size=728x90:100)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:46:53.141Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'document.lastChild.append(rubnewscrpt)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:46:53.141Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - stack:
+  (anonymous function) (https://sasinator.realestate.com.au/rea/hserver/viewid=1502614010703/site=rea/area=rent.resultslist/kxkuid=r3n1tzlw5/bedmax=6/bedmin=0/pcode=3000/price=450pw_600pw/proptype=apartment/region=melbourne_city___greater_region/state=vic/sub=melbourne/random=2202388662/pos=footer/size=728x90:100)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:46:57.174Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'document.lastChild.append(rubnewscrpt)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:46:57.174Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - stack:
+  (anonymous function) (https://sasinator.realestate.com.au/rea/hserver/viewid=1502614015154/site=rea/area=rent.resultslist/kxkuid=r3n1tzlw5/bedmax=6/bedmin=0/pcode=3000/price=750pw_1000pw/proptype=apartment/region=melbourne_city___greater_region/state=vic/sub=melbourne/random=560926722/pos=footer/size=728x90:100)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:47:00.907Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'document.lastChild.append(rubnewscrpt)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:47:00.907Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - stack:
+  (anonymous function) (https://sasinator.realestate.com.au/rea/hserver/viewid=1502614019312/site=rea/area=rent.resultslist/kxkuid=r3n1tzlw5/bedmax=6/bedmin=0/pcode=3000/price=250pw_350pw/proptype=apartment/region=melbourne_city___greater_region/state=vic/sub=melbourne/random=5288725323/pos=footer/size=728x90:100)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:47:06.511Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'document.lastChild.append(rubnewscrpt)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:47:06.511Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - stack:
+  (anonymous function) (https://sasinator.realestate.com.au/rea/hserver/viewid=1502614024770/site=rea/area=rent.resultslist/kxkuid=r3n1tzlw5/bedmax=6/bedmin=0/pcode=3000/price=600pw_750pw/proptype=apartment/region=melbourne_city___greater_region/state=vic/sub=melbourne/random=641797636/pos=footer/size=728x90:100)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:47:18.133Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'document.lastChild.append(rubnewscrpt)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:47:18.133Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - stack:
+  (anonymous function) (https://sasinator.realestate.com.au/rea/hserver/viewid=1502614035713/site=rea/area=rent.resultslist/kxkuid=r3n1tzlw5/bedmax=6/bedmin=0/pcode=3000/price=600pw_750pw/proptype=apartment/region=melbourne_city___greater_region/state=vic/sub=melbourne/random=8708235893/pos=footer/size=728x90:100)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:47:28.779Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'document.lastChild.append(rubnewscrpt)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:47:28.779Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - stack:
+  (anonymous function) (https://sasinator.realestate.com.au/rea/hserver/viewid=1502614047086/site=rea/area=rent.resultslist/kxkuid=r3n1tzlw5/bedmax=6/bedmin=0/pcode=3000/price=350pw_450pw/proptype=apartment/region=melbourne_city___greater_region/state=vic/sub=melbourne/random=843121870/pos=footer/size=728x90:100)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:47:32.502Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'document.lastChild.append(rubnewscrpt)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:47:32.502Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - stack:
+  (anonymous function) (https://sasinator.realestate.com.au/rea/hserver/viewid=1502614050885/site=rea/area=rent.resultslist/kxkuid=r3n1tzlw5/bedmax=6/bedmin=0/pcode=3000/price=450pw_600pw/proptype=apartment/region=melbourne_city___greater_region/state=vic/sub=melbourne/random=5507555676/pos=footer/size=728x90:100)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:47:37.113Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'document.lastChild.append(rubnewscrpt)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:47:37.113Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - stack:
+  (anonymous function) (https://sasinator.realestate.com.au/rea/hserver/viewid=1502614054930/site=rea/area=rent.resultslist/kxkuid=r3n1tzlw5/bedmax=6/bedmin=0/pcode=3000/price=450pw_600pw/proptype=house/region=melbourne_city___greater_region/state=vic/sub=melbourne/random=9885450529/pos=footer/size=728x90:100)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:47:59.048Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'document.lastChild.append(rubnewscrpt)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-08-13T08:47:59.048Z] Session [c14807f0-8003-11e7-94e5-e5d4c932781e] - page.onError - stack:
+  (anonymous function) (https://sasinator.realestate.com.au/rea/hserver/viewid=1502614077271/site=rea/area=rent.resultslist/kxkuid=r3n1tzlw5/bedmax=6/bedmin=0/pcode=3000/price=450pw_600pw/proptype=apartment/region=melbourne_city___greater_region/state=vic/sub=melbourne/random=3973147757/pos=footer/size=728x90:100)
+
+  phantomjs://platform/console++.js:263 in error
+Memory exhausted.
